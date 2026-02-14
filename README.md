@@ -1,0 +1,1 @@
+# thyda.shop
