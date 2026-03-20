@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thyda Shop — ផ្សារទំនើបออនឡាញ</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">THYDA</div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <span><i class="fa fa-truck"></i> ដឹកជញ្ជូនឥតគិតថ្លៃ លើការបញ្ជាទិញ ≥ $25</span>
+      <span><i class="fa fa-phone"></i> 012 345 678</span>
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-t">T</span>HYDA<span class="logo-dot">.</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">ទំព័រដើម</a></li>
+        <li><a href="shop.html">ហាង</a></li>
+        <li class="dropdown">
+          <a href="#">ប្រភេទ <i class="fa fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="shop.html?cat=electronics"><i class="fa fa-microchip"></i> អេឡិចត្រូនិក</a></li>
+            <li><a href="shop.html?cat=fashion"><i class="fa fa-shirt"></i> សម្លៀកបំពាក់</a></li>
+            <li><a href="shop.html?cat=beauty"><i class="fa fa-spa"></i> ម្សៅ & សម្អាង</a></li>
+            <li><a href="shop.html?cat=home"><i class="fa fa-house"></i> គ្រឿងផ្ទះ</a></li>
+            <li><a href="shop.html?cat=sport"><i class="fa fa-dumbbell"></i> កីឡា</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">អំពីពួកយើង</a></li>
+        <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="search-wrap">
+          <input type="text" id="searchInput" placeholder="ស្វែងរកទំនិញ..." />
+          <button class="search-btn"><i class="fa fa-search"></i></button>
+        </div>
+        <a href="#" class="nav-icon" id="wishlistBtn" title="Wishlist">
+          <i class="fa fa-heart"></i>
+          <span class="badge" id="wishlistCount">0</span>
+        </a>
+        <a href="cart.html" class="nav-icon" title="Cart">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="badge" id="cartCount">0</span>
+        </a>
+        <a href="account.html" class="nav-icon" title="Account">
+          <i class="fa fa-user"></i>
+        </a>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SLIDER -->
+  <section class="hero">
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" style="--bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e)">
+        <div class="hero-content">
+          <span class="hero-label">🔥 ការផ្ដល់ជូនពិសេស</span>
+          <h1>របស់ប្រើប្រាស់<br /><em>គ្រប់ប្រភេទ</em></h1>
+          <p>ស្វែងរកទំនិញល្អ ក្នុងតម្លៃសមរម្យ<br/>ដឹកដល់ផ្ទះ រហ័ស ទុកចិត្តបាន</p>
+          <div class="hero-btns">
+            <a href="shop.html" class="btn btn-primary">ទិញឥឡូវ <i class="fa fa-arrow-right"></i></a>
+            <a href="shop.html?sale=1" class="btn btn-outline">មើលការបញ្ចុះតម្លៃ</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>10K+</strong><span>ទំនិញ</span></div>
+            <div><strong>50K+</strong><span>អតិថិជន</span></div>
+            <div><strong>4.9★</strong><span>វាយតម្លៃ</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-circle"></div>
+          <div class="hero-img-wrap">
+            <div class="product-float-card">
+              <i class="fa fa-star"></i> ទំនិញពេញនិយម
+            </div>
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=500&q=80" alt="Hero Product" class="hero-img" />
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="--bg: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)">
+        <div class="hero-content">
+          <span class="hero-label">✨ ថ្មី! ម៉ូដល្អ</span>
+          <h1>Fashion<br /><em>& Style</em></h1>
+          <p>សម្លៀកបំពាក់ ស្ទាយថ្មី ទំនើប<br/>ពណ៌ច្រើន ទំហំគ្រប់</p>
+          <div class="hero-btns">
+            <a href="shop.html?cat=fashion" class="btn btn-primary">មើលបន្ថែម <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-circle" style="background: rgba(255,100,100,0.15)"></div>
+          <div class="hero-img-wrap">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=500&q=80" alt="Fashion" class="hero-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-controls">
+      <button class="hero-prev" id="heroPrev"><i class="fa fa-chevron-left"></i></button>
+      <div class="hero-dots" id="heroDots"></div>
+      <button class="hero-next" id="heroNext"><i class="fa fa-chevron-right"></i></button>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>🆓 ដឹកឥតគិតថ្លៃ ≥$25</span>
+      <span>💳 បង់ប្រាក់ ABA · ACLEDA · Wing</span>
+      <span>🔄 ប្ដូរទំនិញក្នុង 7 ថ្ងៃ</span>
+      <span>⭐ ទំនិញពិតប្រាកដ 100%</span>
+      <span>📦 ដឹកជញ្ជូន 1-3 ថ្ងៃ</span>
+      <span>🎁 អំណោយពិសេស</span>
+      <span>🆓 ដឹកឥតគិតថ្លៃ ≥$25</span>
+      <span>💳 បង់ប្រាក់ ABA · ACLEDA · Wing</span>
+      <span>🔄 ប្ដូរទំនិញក្នុង 7 ថ្ងៃ</span>
+      <span>⭐ ទំនិញពិតប្រាកដ 100%</span>
+      <span>📦 ដឹកជញ្ជូន 1-3 ថ្ងៃ</span>
+      <span>🎁 អំណោយពិសេស</span>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="section categories-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Browse</span>
+        <h2>ប្រភេទទំនិញ</h2>
+        <p>ស្វែងរកតាមប្រភេទដែលអ្នកចង់បាន</p>
+      </div>
+      <div class="categories-grid">
+        <a href="shop.html?cat=electronics" class="cat-card" style="--c:#6c63ff">
+          <div class="cat-icon"><i class="fa fa-laptop"></i></div>
+          <h3>អេឡិចត្រូនិក</h3>
+          <span>250+ ផលិតផល</span>
+        </a>
+        <a href="shop.html?cat=fashion" class="cat-card" style="--c:#ff6b6b">
+          <div class="cat-icon"><i class="fa fa-shirt"></i></div>
+          <h3>សម្លៀកបំពាក់</h3>
+          <span>180+ ផលិតផល</span>
+        </a>
+        <a href="shop.html?cat=beauty" class="cat-card" style="--c:#ffc75f">
+          <div class="cat-icon"><i class="fa fa-spa"></i></div>
+          <h3>ម្សៅ & សម្អាង</h3>
+          <span>320+ ផលិតផល</span>
+        </a>
+        <a href="shop.html?cat=home" class="cat-card" style="--c:#0be881">
+          <div class="cat-icon"><i class="fa fa-couch"></i></div>
+          <h3>គ្រឿងផ្ទះ</h3>
+          <span>150+ ផលិតផល</span>
+        </a>
+        <a href="shop.html?cat=sport" class="cat-card" style="--c:#05c4f0">
+          <div class="cat-icon"><i class="fa fa-dumbbell"></i></div>
+          <h3>កីឡា</h3>
+          <span>90+ ផលិតផល</span>
+        </a>
+        <a href="shop.html?cat=food" class="cat-card" style="--c:#ff9f43">
+          <div class="cat-icon"><i class="fa fa-utensils"></i></div>
+          <h3>អាហារ & ភេសជ្ជៈ</h3>
+          <span>200+ ផលិតផល</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLASH SALE TIMER -->
+  <section class="flash-sale-section">
+    <div class="container">
+      <div class="flash-sale-banner">
+        <div class="flash-left">
+          <div class="flash-badge">⚡ FLASH SALE</div>
+          <h2>បញ្ចុះតម្លៃ <span class="flash-percent">ដល់ 70%</span></h2>
+          <p>ឱកាសពិសេស! ទិញមុន ចំណេញជាង</p>
+          <a href="shop.html?sale=1" class="btn btn-flash">ទំនិញ Flash Sale</a>
+        </div>
+        <div class="flash-timer">
+          <p>ផុតកំណត់ក្នុង</p>
+          <div class="timer-boxes">
+            <div class="timer-box"><span id="th">00</span><small>ម៉ោង</small></div>
+            <div class="colon">:</div>
+            <div class="timer-box"><span id="tm">00</span><small>នាទី</small></div>
+            <div class="colon">:</div>
+            <div class="timer-box"><span id="ts">00</span><small>វិនាទី</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Hot Picks</span>
+        <h2>ទំនិញពេញនិយម</h2>
+        <p>ទំនិញដែលអតិថិជនបំណងចង់បានជាច្រើនបំផុត</p>
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">ទាំងអស់</button>
+        <button class="filter-tab" data-filter="electronics">អេឡិចត្រូនិក</button>
+        <button class="filter-tab" data-filter="fashion">Fashion</button>
+        <button class="filter-tab" data-filter="beauty">Beauty</button>
+        <button class="filter-tab" data-filter="home">គ្រឿងផ្ទះ</button>
+      </div>
+      <div class="products-grid" id="featuredGrid"></div>
+      <div class="text-center mt-4">
+        <a href="shop.html" class="btn btn-outline-dark">មើលទំនិញទាំងអស់ <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER CTA -->
+  <section class="cta-banner">
+    <div class="cta-content">
+      <span class="cta-tag">App ថ្មី!</span>
+      <h2>ទាញយក Thyda App</h2>
+      <p>ទិញទំនិញបានទាន់ ដល់ដៃ ជាមួយ App ដ៏ងាយស្រួល</p>
+      <div class="app-btns">
+        <a href="#" class="app-btn"><i class="fab fa-apple"></i> App Store</a>
+        <a href="#" class="app-btn"><i class="fab fa-google-play"></i> Google Play</a>
+      </div>
+    </div>
+    <div class="cta-decoration"></div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Just In</span>
+        <h2>ទំនិញទើបមក</h2>
+      </div>
+      <div class="products-grid" id="newArrivalsGrid"></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Reviews</span>
+        <h2>មតិអតិថិជន</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"ទំនិញល្អ ដឹកជញ្ជូនរហ័ស ខ្ញុំពេញចិត្តណាស់! លើកក្រោយនឹងទិញទៀតជាក់ជាមែន។"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ស</div>
+            <div><strong>សុខ ដារ៉ា</strong><span>ភ្នំពេញ</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card featured">
+          <div class="stars">★★★★★</div>
+          <p>"Website ស្អាតណាស់ ស្វែងរកទំនិញបានងាយ ហើយតម្លៃសមរម្យ ល្អជាងហាងផ្សេងៗ!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">រ</div>
+            <div><strong>រតនា ចន្ទ</strong><span>សៀមរាប</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Customer service ល្អ ទំនាក់ទំនងបានភ្លាម ហើយទំនិញពិតប្រាកដ 100%!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ម</div>
+            <div><strong>មករា សុភ័ព</strong><span>បាត់ដំបង</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h2>ចុះឈ្មោះទទួល Offer</h2>
+          <p>ទទួលបាន 10% OFF លើការបញ្ជាទិញដំបូង!</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="អ៊ីមែលរបស់អ្នក..." required />
+          <button type="submit" class="btn btn-primary">ចុះឈ្មោះ</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-t">T</span>HYDA<span class="logo-dot">.</span></div>
+          <p>ហាងលក់ទំនិញអនឡាញ គ្រប់ប្រភេទ គ្រប់តម្លៃ ដឹកដល់ផ្ទះ។</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>ហាង</h4>
+          <ul>
+            <li><a href="shop.html">ទំនិញទាំងអស់</a></li>
+            <li><a href="shop.html?sale=1">Flash Sale</a></li>
+            <li><a href="shop.html?new=1">ទំនិញថ្មី</a></li>
+            <li><a href="shop.html?popular=1">ពេញនិយម</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>ជំនួយ</h4>
+          <ul>
+            <li><a href="#">របៀបបញ្ជាទិញ</a></li>
+            <li><a href="#">របៀបដឹកជញ្ជូន</a></li>
+            <li><a href="#">ប្ដូរ/ប្រគល់ទំនិញ</a></li>
+            <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>ទំនាក់ទំនង</h4>
+          <ul>
+            <li><i class="fa fa-phone"></i> 012 345 678</li>
+            <li><i class="fab fa-telegram"></i> @thydashop</li>
+            <li><i class="fa fa-envelope"></i> info@thyda.com</li>
+            <li><i class="fa fa-location-dot"></i> ភ្នំពេញ, កម្ពុជា</li>
+          </ul>
+          <div class="payment-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/200px-Visa_Inc._logo.svg.png" alt="Visa" />
+            <span class="pay-tag">ABA</span>
+            <span class="pay-tag">WING</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Thyda Shop. រក្សាសិទ្ធទាំងអស់។</p>
+        <div>
+          <a href="#">គោលការណ៍ភាពឯកជន</a>
+          <a href="#">លក្ខខណ្ឌប្រើប្រាស់</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h3><i class="fa fa-shopping-bag"></i> កន្ត្រកទំនិញ</h3>
+      <button class="close-drawer" id="closeCart"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <i class="fa fa-shopping-bag"></i>
+        <p>កន្ត្រករបស់អ្នកទទេ</p>
+        <a href="shop.html" class="btn btn-primary">ទៅទិញ</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>សរុប</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <a href="cart.html" class="btn btn-primary full-width">ចូលមើលកន្ត្រក</a>
+    </div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></button>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

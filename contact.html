@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ទំនាក់ទំនង — Thyda Shop</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="shop-page">
+  <header class="header scrolled" id="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo"><span class="logo-t">T</span>HYDA<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">ទំព័រដើម</a></li>
+        <li><a href="shop.html">ហាង</a></li>
+        <li><a href="contact.html" class="active">ទំនាក់ទំនង</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-icon"><i class="fa fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>ទំនាក់ទំនង</h1>
+      <nav class="breadcrumb"><a href="index.html">ទំព័រដើម</a> <i class="fa fa-chevron-right"></i> <span>ទំនាក់ទំនង</span></nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>យើងនៅទីនេះ!</h2>
+          <p>មានសំណួរ ឬត្រូវការជំនួយ? ទំនាក់ទំនងមកពួកយើង។</p>
+          <div class="contact-cards">
+            <div class="contact-card"><i class="fa fa-phone"></i><div><strong>ទូរស័ព្ទ</strong><span>012 345 678</span></div></div>
+            <div class="contact-card"><i class="fab fa-telegram"></i><div><strong>Telegram</strong><span>@thydashop</span></div></div>
+            <div class="contact-card"><i class="fa fa-envelope"></i><div><strong>Email</strong><span>info@thyda.com</span></div></div>
+            <div class="contact-card"><i class="fa fa-clock"></i><div><strong>ម៉ោងធ្វើការ</strong><span>ច័ន្ទ-អាទិត្យ 8AM–8PM</span></div></div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <h3>ផ្ញើសំណួរ</h3>
+            <div class="form-row">
+              <div class="form-group"><label>ឈ្មោះ</label><input type="text" placeholder="ឈ្មោះរបស់អ្នក" required /></div>
+              <div class="form-group"><label>ទូរស័ព្ទ</label><input type="tel" placeholder="0XX XXX XXX" required /></div>
+            </div>
+            <div class="form-group"><label>Email</label><input type="email" placeholder="email@example.com" /></div>
+            <div class="form-group"><label>ប្រធានបទ</label>
+              <select><option>សំណួរទូទៅ</option><option>ការបញ្ជាទិញ</option><option>ការដឹកជញ្ជូន</option><option>ប្ដូរ/ប្រគល់ទំនិញ</option></select>
+            </div>
+            <div class="form-group"><label>សំណួររបស់អ្នក</label><textarea placeholder="សរសេរសំណួររបស់អ្នក..." rows="5" required></textarea></div>
+            <button type="submit" class="btn btn-primary full-width">ផ្ញើ <i class="fa fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container"><div class="footer-bottom"><p>© 2025 Thyda Shop.</p></div></div>
+  </footer>
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('សំណួររបស់អ្នកបានផ្ញើដោយជោគជ័យ! 🎉', 'success');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

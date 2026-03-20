@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>កន្ត្រក — Thyda Shop</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="shop-page">
+  <header class="header scrolled" id="header">
+    <div class="header-top"><span><i class="fa fa-truck"></i> ដឹកជញ្ជូនឥតគិតថ្លៃ ≥ $25</span></div>
+    <nav class="navbar">
+      <a href="index.html" class="logo"><span class="logo-t">T</span>HYDA<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">ទំព័រដើម</a></li>
+        <li><a href="shop.html">ហាង</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-icon"><i class="fa fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>កន្ត្រកទំនិញ</h1>
+      <nav class="breadcrumb"><a href="index.html">ទំព័រដើម</a> <i class="fa fa-chevron-right"></i> <span>កន្ត្រក</span></nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="cart-page-layout" id="cartPageLayout">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom"><p>© 2025 Thyda Shop.</p></div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <button class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></button>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', initCartPage);</script>
+</body>
+</html>

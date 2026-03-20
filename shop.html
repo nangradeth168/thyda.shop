@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ហាង — Thyda Shop</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="shop-page">
+
+  <!-- HEADER -->
+  <header class="header scrolled" id="header">
+    <div class="header-top">
+      <span><i class="fa fa-truck"></i> ដឹកជញ្ជូនឥតគិតថ្លៃ លើការបញ្ជាទិញ ≥ $25</span>
+      <span><i class="fa fa-phone"></i> 012 345 678</span>
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="logo"><span class="logo-t">T</span>HYDA<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">ទំព័រដើម</a></li>
+        <li><a href="shop.html" class="active">ហាង</a></li>
+        <li class="dropdown">
+          <a href="#">ប្រភេទ <i class="fa fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="shop.html?cat=electronics"><i class="fa fa-microchip"></i> អេឡិចត្រូនិក</a></li>
+            <li><a href="shop.html?cat=fashion"><i class="fa fa-shirt"></i> សម្លៀកបំពាក់</a></li>
+            <li><a href="shop.html?cat=beauty"><i class="fa fa-spa"></i> ម្សៅ & សម្អាង</a></li>
+            <li><a href="shop.html?cat=home"><i class="fa fa-house"></i> គ្រឿងផ្ទះ</a></li>
+            <li><a href="shop.html?cat=sport"><i class="fa fa-dumbbell"></i> កីឡា</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">អំពីពួកយើង</a></li>
+        <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="search-wrap">
+          <input type="text" id="searchInput" placeholder="ស្វែងរកទំនិញ..." />
+          <button class="search-btn"><i class="fa fa-search"></i></button>
+        </div>
+        <a href="#" class="nav-icon" id="wishlistBtn"><i class="fa fa-heart"></i><span class="badge" id="wishlistCount">0</span></a>
+        <a href="cart.html" class="nav-icon"><i class="fa fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></a>
+        <a href="account.html" class="nav-icon"><i class="fa fa-user"></i></a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <h1>ហាងទំនិញ</h1>
+      <nav class="breadcrumb">
+        <a href="index.html">ទំព័រដើម</a> <i class="fa fa-chevron-right"></i> <span>ហាង</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- SHOP LAYOUT -->
+  <section class="shop-layout section">
+    <div class="container">
+      <div class="shop-wrap">
+
+        <!-- SIDEBAR -->
+        <aside class="shop-sidebar" id="shopSidebar">
+          <button class="sidebar-close" id="sidebarClose"><i class="fa fa-times"></i></button>
+
+          <div class="sidebar-widget">
+            <h4>ស្វែងរក</h4>
+            <div class="sidebar-search">
+              <input type="text" id="sidebarSearch" placeholder="ស្វែងរក..." />
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h4>ប្រភេទ</h4>
+            <ul class="cat-list" id="catList">
+              <li><a href="#" class="active" data-cat="all">ទាំងអស់ <span>1200+</span></a></li>
+              <li><a href="#" data-cat="electronics">អេឡិចត្រូនិក <span>250</span></a></li>
+              <li><a href="#" data-cat="fashion">សម្លៀកបំពាក់ <span>180</span></a></li>
+              <li><a href="#" data-cat="beauty">ម្សៅ & សម្អាង <span>320</span></a></li>
+              <li><a href="#" data-cat="home">គ្រឿងផ្ទះ <span>150</span></a></li>
+              <li><a href="#" data-cat="sport">កីឡា <span>90</span></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-widget">
+            <h4>តម្លៃ</h4>
+            <div class="price-range">
+              <input type="range" id="priceRange" min="0" max="500" value="500" />
+              <div class="price-range-values">
+                <span>$0</span>
+                <span id="priceVal">$500</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h4>ការវាយតម្លៃ</h4>
+            <ul class="rating-filter">
+              <li><label><input type="radio" name="rating" value="5" /> ★★★★★</label></li>
+              <li><label><input type="radio" name="rating" value="4" /> ★★★★☆ ≥4</label></li>
+              <li><label><input type="radio" name="rating" value="3" /> ★★★☆☆ ≥3</label></li>
+              <li><label><input type="radio" name="rating" value="0" checked /> ទាំងអស់</label></li>
+            </ul>
+          </div>
+
+          <button class="btn btn-primary full-width" id="applyFilters">ប្រើ Filter</button>
+          <button class="btn btn-outline full-width mt-2" id="clearFilters">លប់ Filter</button>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="shop-main">
+          <div class="shop-toolbar">
+            <div class="toolbar-left">
+              <button class="sidebar-toggle" id="sidebarToggle"><i class="fa fa-sliders"></i> ចំរោះ</button>
+              <span class="result-count" id="resultCount">មើលទំនិញ...</span>
+            </div>
+            <div class="toolbar-right">
+              <select id="sortSelect" class="sort-select">
+                <option value="default">តម្រៀប: ស្ដង់ដារ</option>
+                <option value="price-low">តម្លៃ: ទាបទៅខ្ពស់</option>
+                <option value="price-high">តម្លៃ: ខ្ពស់ទៅទាប</option>
+                <option value="rating">ការវាយតម្លៃ</option>
+                <option value="newest">ថ្មីបំផុត</option>
+              </select>
+              <div class="view-toggle">
+                <button class="view-btn active" id="gridView"><i class="fa fa-th"></i></button>
+                <button class="view-btn" id="listView"><i class="fa fa-list"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="products-grid" id="shopGrid"></div>
+          <div class="pagination" id="pagination"></div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-t">T</span>HYDA<span class="logo-dot">.</span></div>
+          <p>ហាងលក់ទំនិញអនឡាញ គ្រប់ប្រភេទ</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>ហាង</h4><ul><li><a href="shop.html">ទំនិញទាំងអស់</a></li><li><a href="shop.html?sale=1">Flash Sale</a></li></ul></div>
+        <div class="footer-col"><h4>ជំនួយ</h4><ul><li><a href="#">របៀបបញ្ជាទិញ</a></li><li><a href="contact.html">ទំនាក់ទំនង</a></li></ul></div>
+        <div class="footer-col"><h4>ទំនាក់ទំនង</h4><ul><li><i class="fa fa-phone"></i> 012 345 678</li><li><i class="fab fa-telegram"></i> @thydashop</li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Thyda Shop.</p></div>
+    </div>
+  </footer>
+
+  <!-- OVERLAYS -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h3><i class="fa fa-shopping-bag"></i> កន្ត្រកទំនិញ</h3>
+      <button class="close-drawer" id="closeCart"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart"><i class="fa fa-shopping-bag"></i><p>កន្ត្រករបស់អ្នកទទេ</p></div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total"><span>សរុប</span><strong id="cartTotal">$0.00</strong></div>
+      <a href="cart.html" class="btn btn-primary full-width">ចូលមើលកន្ត្រក</a>
+    </div>
+  </aside>
+  <div class="toast-container" id="toastContainer"></div>
+  <button class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></button>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initShopPage();
+    });
+  </script>
+</body>
+</html>
